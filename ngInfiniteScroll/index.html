@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular JS scroll</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div ng-app='myApp' ng-controller='numbersController'>
+		<div infinite-scroll='loadmore()' >
+			<img class="tile" ng-repeat='n in numbers' ng-src='http://placehold.it/100x100&text={{n}}'></img>
+		</div>
+	</div>
+
+	<!--<script type="text/javascript" src='lib/jquery-2.1.1.min.js'></script>
+	// <script type="text/javascript" src='lib.angular.min.js'></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
+	<script type="text/javascript" src='lib/ng-infinite-scroll.min.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+
+</body>
+</html>

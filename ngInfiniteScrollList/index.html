@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinite Scroll not working</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.js"></script>
+      <script type="text/javascript" src="ngInfiniteScroll.js"></script>
+      
+      <script type="text/javascript" src="app.js"></script>
+    
+  </head>
+    
+  <body ng-app="app" ng-controller="listController">
+      <div id="list-wrapper">
+          <div class="list" infinite-scroll='loadMore()' 
+        infinite-scroll-distance='2' 
+        infinite-scroll-container="'#list-wrapper'">
+            <div class="header">
+
+            </div>
+
+            <div class="list-table" >
+                <table class="table">
+                    <tbody>
+                        <tr ng-repeat="item in infiniteList">
+                            <td style="width:100%">
+                                <div>{{item}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style='clear: both;'></div>
+            </div>
+      </div>
+      
+      <h4>{{scrollTriggered}}</h4>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+    
+</html>
